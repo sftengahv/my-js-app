@@ -5,7 +5,7 @@ let pokemonlist = [
         types: ['grass', 'poision']
     },
     {
-        name: 'CHarmander',
+        name: 'Charmander',
         height: 6,
         types: ['fire']
     },
@@ -15,3 +15,24 @@ let pokemonlist = [
         types: ['water']
     }
 ];
+
+for (let i = 0; i <pokemonlist.length; i++){
+    let pokemon = pokemonlist[i];
+    let output = pokemon.name + ' (height; ' + pokemon.height +')';
+
+    if (pokemon.height > 6) {
+        output('wow that\'s big')
+    }
+    document.write(output + '')
+}
+
+
+//let pokemon = { name: "eve", size: 0.3 };
+
+//if (pokemon.size > 1.5) //
+    //console.log("this is a big pokemon")
+//} else if (pokemon.size > 0.5 && pokemon.size < 1.5) {
+   // console.log("This is an average pokemon");
+//} else {
+   // console.log("this is a small pokemon")
+//}
