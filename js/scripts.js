@@ -23,7 +23,7 @@ for (let i = 0; i <pokemonlist.length; i++){
     if (pokemon.height > 6) {
         output = output + ' - wow that\'s big'
     }
-    document.write(output + 'br') //adds a line break so that each pokemon has their own line 
+    document.write(output + '<br>') //adds a line break so that each pokemon has their own line 
 }
 
 
