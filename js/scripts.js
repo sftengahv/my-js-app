@@ -16,6 +16,7 @@ let pokemonlist = [
     }
 ];
 
+//function printArraydetails (){}
 for (let i = 0; i <pokemonlist.length; i++){
     let pokemon = pokemonlist[i];
     let output = pokemon.name + ' (height; ' + pokemon.height +')';
@@ -25,6 +26,10 @@ for (let i = 0; i <pokemonlist.length; i++){
     }
     document.write(output + '<br>') //adds a line break so that each pokemon has their own line 
 }
+
+//calling printarraydetails function twice
+//printArrayDetails();
+//printArrayDetails();
 
 
 //let pokemon = { name: "eve", size: 0.3 };
