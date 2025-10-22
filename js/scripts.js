@@ -41,3 +41,14 @@ for (let i = 0; i <pokemonlist.length; i++){
 //} else {
    // console.log("this is a small pokemon")
 //}
+
+//function div(dividend, divisor){
+    //if(divisor ===0){
+       // return "Youre\re trying to divide by zero."
+   // } else{
+       // let result = divedend / divisor;
+       // return result; 
+    //}
+//}
+
+//comsole.log(divide(4,2));
