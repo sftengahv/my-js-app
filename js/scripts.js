@@ -35,6 +35,18 @@ let pokemonRepository = (function () { //iife
 
 //function printArraydetails (){}
 pokemonRepository.getAll().forEach(function(pokemon){
+
+    let pokemonList= document.querySelector('.pokemon-list');
+    
+    // Create a list item
+    let Listpokemon = document.createElement('li');
+
+    let button = document.createElement('button');
+    button.innerText = pokemon.name; // Button text = Pokemon Name
+    button.classList.add('button-class');
+    Listpokemon.appendChild(button);
+    pokemonList.appendChild(Listpokemon); 
+
     console.log(pokemon)
 //for (let i = 0; i < pokemonlist.length; i++) {
     //let pokemon = pokemonlist[i];
