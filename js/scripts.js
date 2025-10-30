@@ -34,15 +34,17 @@ let pokemonRepository = (function () { //iife
 })()
 
 //function printArraydetails (){}
-for (let i = 0; i < pokemonlist.length; i++) {
-    let pokemon = pokemonlist[i];
+pokemonRepository.getAll().forEach(function(pokemon){
+    console.log(pokemon)
+//for (let i = 0; i < pokemonlist.length; i++) {
+    //let pokemon = pokemonlist[i];
     let output = pokemon.name + ' (height; ' + pokemon.height + ')';
 
     if (pokemon.height > 6) {
         output = output + ' - wow that\'s big'
     }
     document.write(output + '<br>') //adds a line break so that each pokemon has their own line 
-}
+});
 
 //calling printarraydetails function twice
 //printArrayDetails();
