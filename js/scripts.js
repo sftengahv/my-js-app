@@ -3,23 +3,8 @@ let pokemonRepository = (function () { //iife
 
     let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150'
 
-    let pokemonlist = [
-        {
-            name: 'Bulbasaur',
-            height: 7,
-            types: ['grass', 'poision']
-        },
-        {
-            name: 'Charmander',
-            height: 6,
-            types: ['fire']
-        },
-        {
-            name: 'Squirtle',
-            height: 5,
-            types: ['water']
-        }
-    ]
+    let pokemonlist = []
+    
     function loadList() {
         return fetch(apiUrl)
             .then(function (response) {
@@ -118,15 +103,8 @@ pokemonRepository.loadList().then(function () {
 
 
 
-        console.log(pokemon)
-        //for (let i = 0; i < pokemonlist.length; i++) {
-        //let pokemon = pokemonlist[i];
-        let output = pokemon.name + ' (height; ' + pokemon.height + ')';
+        console.log(pokemon) 
 
-        if (pokemon.height > 6) {
-            output = output + ' - wow that\'s big'
-        }
-        document.write(output + '<br>') //adds a line break so that each pokemon has their own line 
     });
 });
 
