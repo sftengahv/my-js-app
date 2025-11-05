@@ -73,8 +73,66 @@ let pokemonRepository = (function () { //iife
     pokemonList.appendChild(Listpokemon);
 }
 
+function showModal(pokemon){
+    modalContainer.innerHTML ='';
+
+    let modal = document.createElement('div');
+        modal.classList.add('modal');
+    
+        let closeButton = document.createElement('button');
+        closeButton.classList.add('modal-close');
+        closeButton.innerText = 'x';
+        closeButton.addEventListener('click', hiddenModal);
+
+        let titleElement = document.createElement('h1');
+        titleElement.innterText = pokemon.name;
+
+        let imageElement = document.createElement('img');
+        imageElement.classList.add('modal-img');
+        imageElement.src = pokemon.imageUrl;
+        imageElement.alt = '${pokemon.name} image';
+
+        let contentElement = document.createElement('p');
+        contentElement.innerText = 'height: ${pokemoon.height} m';
+
+        let weightElement = document.createElement('p');
+        weightElement.innerText = 'weight: ${pokemon.weight} kg';
+
+        let typeElement  = document.createElement('p')
+        typeElement.innerText = 'types: ${pokemon.types.join(',')}';
+
+}
+
+
+modal.appendChild(closeButton);
+modal.appendChild(titleElement);
+modal.appendChild(imageElement);
+modal.appendChild(contentElement);
+modal.appendChild(weightElement);
+modal.appendChild(typeElement);
+
+modalContainer.appendChild(modal);
+
+
+function hiddenModal(){
+    modalContainer.classList.remove('is-visible');
+}
+
+window.addEventListener('keydown',(e) => {
+    if(e.key === 'Escape' && modalContainer.clasList.contains('is-visible')){
+        hiddenModal();
+    }
+});
+
+modalContainer.addEventListener('click',(e)=> {
+    let target = e.target;
+    if(target === modalContainer){
+        hiddenModal();
+    }
+});
 function showDetails(pokemon) {
     loadDetails(pokemon).then(function () {
+        showModal(pokemon)
         console.log(pokemon);
 
         alert(
@@ -98,11 +156,6 @@ pokemonRepository.loadList().then(function () {
 
     pokemonRepository.getAll().forEach(function (pokemon) {
         pokemonRepository.addListItem(pokemon);
-
-
-
-
-
         console.log(pokemon) 
 
     });
@@ -131,5 +184,3 @@ pokemonRepository.loadList().then(function () {
 // return result;
 //}
 //}
-
-//console.log(divide(4,2))
