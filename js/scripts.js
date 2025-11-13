@@ -92,16 +92,16 @@ let pokemonRepository = (function () { //iife
         let imageElement = document.createElement('img');
         imageElement.classList.add('modal-img');
         imageElement.src = pokemon.imageUrl;
-        imageElement.alt = '${pokemon.name} image';
+        imageElement.alt = `${pokemon.name} image`;
 
         let contentElement = document.createElement('p');
-        contentElement.innerText = 'height: ${pokemoon.height} m';
+        contentElement.innerText = `height: ${pokemoon.height} m`;
 
         let weightElement = document.createElement('p');
-        weightElement.innerText = 'weight: ${pokemon.weight} kg';
+        weightElement.innerText = `weight: ${pokemon.weight} kg`;
 
         let typeElement = document.createElement('p')
-        typeElement.innerText = 'types: ${pokemon.types.join(', ')}';
+        typeElement.innerText = `types: ${pokemon.types.join(', ')}`;
         modal.appendChild(closeButton);
         modal.appendChild(titleElement);
         modal.appendChild(imageElement);
