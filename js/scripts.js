@@ -58,12 +58,20 @@ let pokemonRepository = (function () { //iife
 
         // Create a list item
         let Listpokemon = document.createElement('li');
+        Listpokemon.classList.add(
+            'list-group-item',
+            'd-felx',
+            'justify-content-between',
+            'align-items-center'
+        );
 
         let button = document.createElement('button');
 
         button.innerText = pokemon.name;
         // Button text = Pokemon Name
-        button.classList.add('button-class');
+        button.classList.add('btn', 'btn-primary', 'btn-sm');
+        button.setAttribute('data-toggle', 'modal');
+        button.setAttribute('data-target', '#pokemonmodal');
 
         button.addEventListener('click', function () {
             showDetails(pokemon);
