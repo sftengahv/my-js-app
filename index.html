@@ -14,14 +14,18 @@
   </head>
 
   <body>
+    <nav class="nabar bg-body-tertiary">
+      <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1">Navbar</span>
+      </div>
+    </nav>
+
     <button
       type="button"
       class="btn btn-primary"
       data-toggle="modal"
       data-target="#exampleModal"
-    >
-      Launch demo modal
-    </button>
+    ></button>
 
     <div
       class="modal fade"
@@ -34,7 +38,6 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
             <button
               type="button"
               class="close"
@@ -53,13 +56,12 @@
             >
               Close
             </button>
-            <button type="button" class="btn btn-primary">Save changes</button>
           </div>
         </div>
       </div>
     </div>
     <h1>Pokedex</h1>
-    <ul class="pokemon-list"></ul>
+    <ul class="pokemon-list list-group"></ul>
 
     <script src="js/scripts.js"></script>
     <script
